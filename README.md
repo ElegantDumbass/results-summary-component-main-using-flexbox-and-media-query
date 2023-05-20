@@ -77,6 +77,7 @@ or even in any part of my code if you have a better way to write my code or just
 ## Acknowledgments
 
 this is not the best i could do(hopefully) i'll try to fix any mistakes and improve on i have written.
+it is very hard to just eyeball the design, to be honest it is frustating.
 i do not use :
 
 - CSS Grid
