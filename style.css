@@ -1,0 +1,282 @@
+@import url(https://fonts.google.com/specimen/Hanken+Grotesk);
+
+html {
+  background-color: hsl(0, 0%, 100%);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  block-size: 100vh;
+}
+
+.main-card {
+  display: flex;
+  width: 45rem;
+  height: 31.125rem; /*why is it that if i set the height pf the main-card the same as the blue and white card it overflowed downwards?*/
+  overflow: hidden;
+  background-color: hsl(0, 0%, 100%);
+  filter: drop-shadow(13px 30px 10px hsl(221, 100%, 96%)); /*Filter: drop-shadow worked better than box-shadow*/
+  border-radius: 7%;
+}
+
+/* CARD BLUE */
+.main-card--blue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 22.5rem;
+  height: 29.375rem;
+  text-align: center;
+  border-radius: 7%;
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  padding: 14px;
+}
+
+.main-card--blue h1 {
+  font-family: "Hanken Grotesk", monospace;
+  color: white;
+  font-size: 1.875rem;
+  margin: 0;
+  padding: 0;
+}
+.main-card--blue h2 {
+  font-family: "Hanken Grotesk", monospace;
+  color: rgb(197, 196, 196);
+}
+.main-card--blue p {
+  font-family: "Hanken Grotesk", monospace;
+  color: rgb(197, 196, 196);
+  font-size: 1.25rem;
+  margin-top: 15px;
+  padding: 0;
+}
+
+.main-card--blue__circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 12.5rem;
+  height: 12.5rem;
+  border-radius: 50%;
+  background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+
+  margin-bottom: 20px;
+}
+
+#sevensix {
+  font-size: 5rem;
+  font-weight: 800;
+  margin: 0;
+  padding: 0;
+}
+
+#onehundred {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin: 0;
+  padding: 0;
+}
+/* CARD BLUE END */
+
+/* CARD WHITE RIGHT */
+.main-card--white {
+  width: 22.5rem;
+  height: 29.375rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: start;
+
+  font-family: "Hanken Grotesk", monospace;
+  color: rgb(71, 71, 71);
+}
+
+.main-card--white h1 {
+  /* i have a feeling this isnt the best way to do this */
+  width: 17.5rem;
+  margin-bottom: 25px;
+  margin-top: -4px;
+  font-size: 1.875rem;
+}
+
+.main-card--white button {
+  height: 2.8125rem;
+  width: 17.5rem;
+  border-radius: 45px;
+
+  position: relative;
+  top: 35px;
+
+  background-color: hsl(224, 30%, 27%);
+  color: white;
+  /* To animate button using transition */
+  /* maybe in the future i will make a better transition :) */
+  transition: background-color 0.3 ease;
+}
+
+.main-card--white button:hover {
+  /* add a rule and hover psudeo class? then define the change */
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+.card-score {
+  height: 2.8125rem;
+  width: 17.5rem;
+  border-radius: 5px;
+  margin: 5px 0 5px 0;
+  border: 1px solid black;
+  margin-bottom: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.card-score h2 {
+  font-size: 0.9375rem;
+  margin: 0.9375rem;
+}
+
+.card-score h3 {
+  font-size: 0.9375rem;
+  margin-left: auto;
+  margin-right: 0.9375rem;
+}
+
+.card-score img {
+  margin-left: 0.625rem;
+}
+
+/* Reaction */
+.card-score--reaction {
+  background-color: hsl(0, 100%, 67%, 0.2);
+}
+
+.reaction {
+  color: hsl(0, 100%, 67%);
+}
+/* Reaction END */
+
+/* Memory */
+.card-score--memory {
+  background-color: hsl(39, 100%, 56%, 0.2);
+}
+
+.memory {
+  color: hsl(39, 100%, 56%);
+}
+/* Memory END */
+
+/* Verbal */
+.card-score--verbal {
+  background-color: hsl(166, 100%, 37%, 0.2);
+}
+
+.verbal {
+  color: hsl(166, 100%, 37%);
+}
+/* Verbal END */
+
+/* Visual */
+.card-score--visual {
+  background-color: hsl(234, 85%, 45%, 0.2);
+}
+
+.visual {
+  color: hsl(234, 85%, 45%);
+}
+/* Visual END */
+
+/* CARD WHITE END */
+
+@media (max-width: 625px) {
+  .main-card {
+    flex-direction: column;
+    height: 56.25rem;
+    width: 100%;
+  }
+  .main-card--blue {
+    height: auto;
+    border-radius: 10%;
+    width: 90vw;
+  }
+  .main-card--blue p {
+    padding: 0 50px 0 50px;
+  }
+  .main-card--white {
+    height: auto;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .card-score {
+    height: 3.125rem;
+    width: 28.125rem;
+  }
+  .main-card--white h1 {
+    /* i have a feeling this isnt the best way to do this */
+    width: 18%;
+  }
+  .main-card--white button {
+    height: 3.125rem;
+    width: 28.125rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-card {
+    flex-direction: column;
+    height: 56.25rem;
+    width: 100%;
+  }
+  .main-card--blue {
+    height: auto;
+    border-radius: 10%;
+    width: 85vw;
+  }
+  .main-card--white h1 {
+    /* i have a feeling this isnt the best way to do this */
+    width: 30%;
+  }
+  .card-score {
+    height: 2.8125rem;
+    width: 21.875rem;
+  }
+  .main-card--white button {
+    height: 2.8125rem;
+    width: 21.875rem;
+  }
+}
+
+@media (max-width: 375px) {
+  /* why is the style-guide so small */
+  .main-card {
+    flex-direction: column;
+    height: 59.375rem;
+    width: 100%;
+  }
+  .main-card--blue {
+    height: auto;
+    border-radius: 10%;
+    width: 83vw;
+  }
+  .main-card--white h1 {
+    /* i have a feeling this isnt the best way to do this */
+    width: 35%;
+  }
+  .card-score {
+    height: 2.8125rem;
+    width: 18.75rem;
+  }
+  .main-card--white button {
+    height: 2.8125rem;
+    width: 18.75rem;
+  }
+}
